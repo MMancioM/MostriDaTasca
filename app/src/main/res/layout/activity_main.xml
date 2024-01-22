@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="-1dp" />
+
+    <LinearLayout
+        android:id="@+id/bottom_buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+            <ImageView
+                android:id="@+id/circle2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/cerchio"
+                android:clickable="true"
+                android:contentDescription="Circle Button"
+                android:padding="16dp" />
+
+            <ImageButton
+                android:id="@+id/classifica"
+                android:layout_width="101dp"
+                android:layout_height="98dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="16dp"
+                android:src="@drawable/leaderboard_foreground" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/circle"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/cerchio"
+                android:clickable="true"
+                android:contentDescription="Circle Button"
+                android:padding="16dp"/>
+
+            <ImageButton
+                android:id="@+id/listObject"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="16dp"
+                android:src="@drawable/list_foreground" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <ImageButton
+                android:id="@+id/profilo"
+                android:layout_width="102dp"
+                android:layout_height="98dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="16dp"
+                android:src="@drawable/person_foreground" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profilo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-19dp"
+                android:max="100"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_zoom"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="142dp"
+        android:gravity="center|center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/refreshButton"
+            android:layout_width="86dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#A0A0A0"
+            android:drawableLeft="@drawable/position_icon" />
+
+        <Button
+            android:id="@+id/btnZoomIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A0A0A0"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnZoomOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A0A0A0"
+            android:text="-"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nuovePagine"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="142dp"
+        android:gravity="center|center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/nuovaPagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A0A0A0"
+            android:text="Pagina"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/nuovaPaginaLista"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A0A0A0"
+            android:text="Lista"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>
+
+
